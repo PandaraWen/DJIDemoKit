@@ -29,6 +29,4 @@ http://www.kiwiinc.net
 
 	s.dependency 'DJI-SDK-iOS', '4.2.2'
 
-	s.pod_target_xcconfig = {'ENABLE_BITCODE' => 'NO'}
-
 end
