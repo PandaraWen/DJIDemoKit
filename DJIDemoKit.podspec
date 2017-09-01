@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 	s.name = 'DJIDemoKit'
 	s.version = '0.1'
 	s.author = { 'kiwi-team' => 'www.kiwiinc.net' }
-	s.license      = { :type => 'CUSTOM', :text => <<-LICENSE
+	s.license = { :type => 'CUSTOM', :text => <<-LICENSE
 ****************************************************************************************************************************
 
 DJIDemoKit is offered under KIWI's END USER LICENSE AGREEMENT. You can obtain the license from the below link:
@@ -24,7 +24,7 @@ http://www.kiwiinc.net
 	s.source_files = 'DJIDemoKit/*.swift'
 	
 	s.recource_bundle = {
-		'DDKResource' => ['DJIDemoKit/*.xib', 'DJIDemoKit/.xcassets']
+		'DDKResource' => ['DJIDemoKit/*.xib', 'DJIDemoKit/*.xcassets']
 	}
 
 	spec.dependency 'DJI-SDK-iOS', '4.2.2'
