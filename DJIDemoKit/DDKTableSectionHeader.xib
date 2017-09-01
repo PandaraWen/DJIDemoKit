@@ -11,10 +11,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="SIn-tb-lCg" customClass="DDKTableSectionHeader" customModule="DJIDemoKitDemo" customModuleProvider="target">
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="SIn-tb-lCg" customClass="DDKTableSectionHeader" customModule="DJIDemoKitDemo" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cks-LB-msK">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
                 <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dfu-Lu-fic">
                     <rect key="frame" x="0.0" y="0.0" width="4" height="30"/>
                     <color key="backgroundColor" red="0.0" green="0.5507420234" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -32,12 +36,16 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="3iK-Ef-AYT" firstAttribute="leading" secondItem="dfu-Lu-fic" secondAttribute="trailing" constant="8" id="6IS-Vm-wHq"/>
+                <constraint firstAttribute="trailing" secondItem="Cks-LB-msK" secondAttribute="trailing" id="Dgy-im-HTH"/>
+                <constraint firstAttribute="bottom" secondItem="Cks-LB-msK" secondAttribute="bottom" id="G3h-N0-Ecc"/>
                 <constraint firstItem="dfu-Lu-fic" firstAttribute="leading" secondItem="SIn-tb-lCg" secondAttribute="leading" id="Ill-iY-I1U"/>
                 <constraint firstItem="dfu-Lu-fic" firstAttribute="top" secondItem="SIn-tb-lCg" secondAttribute="top" id="Qtw-lR-G6i"/>
                 <constraint firstAttribute="bottom" secondItem="dfu-Lu-fic" secondAttribute="bottom" id="TyU-9o-UoN"/>
+                <constraint firstItem="Cks-LB-msK" firstAttribute="top" secondItem="SIn-tb-lCg" secondAttribute="top" id="ak9-5t-YSZ"/>
                 <constraint firstItem="3iK-Ef-AYT" firstAttribute="top" secondItem="SIn-tb-lCg" secondAttribute="top" id="bOZ-aQ-KUg"/>
                 <constraint firstAttribute="bottom" secondItem="3iK-Ef-AYT" secondAttribute="bottom" id="cWe-y8-HpI"/>
                 <constraint firstAttribute="trailing" secondItem="3iK-Ef-AYT" secondAttribute="trailing" id="gWG-qz-fNY"/>
+                <constraint firstItem="Cks-LB-msK" firstAttribute="leading" secondItem="SIn-tb-lCg" secondAttribute="leading" id="iCm-7O-lV6"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
