@@ -28,7 +28,6 @@ http://www.kiwiinc.net
 	}
 
 	s.dependency 'DJI-SDK-iOS', '4.2.2'
-  	s.dependency 'VideoPreviewer', :git => 'git@dev.kiwiinc.net:kiwi-team/DJI-Mobile-SDK-iOS.git'
 
 	s.pod_target_xcconfig = {'ENABLE_BITCODE' => 'NO'}
 
