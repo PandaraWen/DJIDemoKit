@@ -1,0 +1,24 @@
+PODS:
+  - DJI-SDK-iOS (4.2.2)
+  - VideoPreviewer (4.2.2)
+
+DEPENDENCIES:
+  - DJI-SDK-iOS (= 4.2.2)
+  - VideoPreviewer (from `git@dev.kiwiinc.net:kiwi-team/DJI-Mobile-SDK-iOS.git`)
+
+EXTERNAL SOURCES:
+  VideoPreviewer:
+    :git: git@dev.kiwiinc.net:kiwi-team/DJI-Mobile-SDK-iOS.git
+
+CHECKOUT OPTIONS:
+  VideoPreviewer:
+    :commit: 53cd946a258c3b421ae092634bf026a313ed5299
+    :git: git@dev.kiwiinc.net:kiwi-team/DJI-Mobile-SDK-iOS.git
+
+SPEC CHECKSUMS:
+  DJI-SDK-iOS: 7a87288dca778e6fe13e5d55a368b4978d753112
+  VideoPreviewer: d4ceeff0024d78945367c87fab487279369dc6cd
+
+PODFILE CHECKSUM: 770919de8867796934441fd8f25e8c6885847564
+
+COCOAPODS: 1.2.1
