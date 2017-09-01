@@ -8,48 +8,48 @@
 
 import DJISDK
 
-class DDKComponentHelper {
-    class func fetchProduct() -> DJIBaseProduct? {
+public class DDKComponentHelper {
+    public class func fetchProduct() -> DJIBaseProduct? {
         return DJISDKManager.product()
     }
     
-    class func fetchAircraft() -> DJIAircraft? {
+    public class func fetchAircraft() -> DJIAircraft? {
         return self.fetchProduct() as? DJIAircraft
     }
     
-    class func fetchHandheld() -> DJIHandheld? {
+    public class func fetchHandheld() -> DJIHandheld? {
         return self.fetchProduct() as? DJIHandheld
     }
     
-    class func fetchCamera() -> DJICamera? {
+    public class func fetchCamera() -> DJICamera? {
         return self.fetchProduct()?.camera
     }
     
-    class func fetchGimbal() -> DJIGimbal? {
+    public class func fetchGimbal() -> DJIGimbal? {
         return self.fetchProduct()?.gimbal
     }
     
-    class func fetchFlightController() -> DJIFlightController? {
+    public class func fetchFlightController() -> DJIFlightController? {
         return self.fetchAircraft()?.flightController
     }
     
-    class func fetchRemoteController() -> DJIRemoteController? {
+    public class func fetchRemoteController() -> DJIRemoteController? {
         return self.fetchAircraft()?.remoteController
     }
     
-    class func fetchBattery() -> DJIBattery? {
+    public class func fetchBattery() -> DJIBattery? {
         return self.fetchProduct()?.battery
     }
     
-    class func fetchAirLink() -> DJIAirLink? {
+    public class func fetchAirLink() -> DJIAirLink? {
         return self.fetchAircraft()?.airLink
     }
     
-    class func fetchHandheldController() -> DJIHandheldController? {
+    public class func fetchHandheldController() -> DJIHandheldController? {
         return self.fetchHandheld()?.handheldController
     }
     
-    class func fetchMobileRemoteController() -> DJIMobileRemoteController? {
+    public class func fetchMobileRemoteController() -> DJIMobileRemoteController? {
         return self.fetchAircraft()?.mobileRemoteController
     }
 }

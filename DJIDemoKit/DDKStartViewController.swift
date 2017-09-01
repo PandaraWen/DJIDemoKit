@@ -9,19 +9,19 @@
 import UIKit
 import DJISDK
 
-protocol DDKStartViewControllerDelegate: NSObjectProtocol {
+public protocol DDKStartViewControllerDelegate: NSObjectProtocol {
     func startViewControllerDidClickGoButton(_ viewCon: DDKStartViewController)
 }
 
-class DDKStartViewController: UIViewController {
-    @IBOutlet weak var goButton: UIButton!
-    @IBOutlet weak var tableview: UITableView!
-    weak var delegate: DDKStartViewControllerDelegate?
+public class DDKStartViewController: UIViewController {
+    @IBOutlet fileprivate weak var goButton: UIButton!
+    @IBOutlet fileprivate weak var tableview: UITableView!
+    public weak var delegate: DDKStartViewControllerDelegate?
     
     fileprivate var infoTitles = ["Modle", "Activation state", "Binding state"]
     fileprivate var settingTitles = ["📟 Remote log", "⛓ Enable bridge"]
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Start up"
         
@@ -190,7 +190,7 @@ fileprivate extension DDKStartViewController {
 }
 
 extension DDKStartViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
         switch indexPath.row {
@@ -205,15 +205,15 @@ extension DDKStartViewController: UITableViewDelegate {
 }
 
 extension DDKStartViewController: UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
+    public func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
     
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 30
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "DDKTableSectionHeader") as! DDKTableSectionHeader
         switch section {
         case 0:
@@ -226,7 +226,7 @@ extension DDKStartViewController: UITableViewDataSource {
         return header
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
             return self.infoTitles.count
@@ -237,11 +237,11 @@ extension DDKStartViewController: UITableViewDataSource {
         }
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 45
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0:
             var infoCell: UITableViewCell
@@ -275,7 +275,7 @@ extension DDKStartViewController: UITableViewDataSource {
 }
 
 extension DDKStartViewController: DJISDKManagerDelegate {
-    func appRegisteredWithError(_ error: Error?) {
+    public func appRegisteredWithError(_ error: Error?) {
         if let error = error {
             ddkLogError("\(error.localizedDescription)")
         } else {
@@ -288,25 +288,25 @@ extension DDKStartViewController: DJISDKManagerDelegate {
             }
         }
     }
-    func productConnected(_ product: DJIBaseProduct?) {
+    public func productConnected(_ product: DJIBaseProduct?) {
         ddkLogInfo("Product connected: \(product?.model ?? "")")
     }
     
-    func productDisconnected() {
+    public func productDisconnected() {
         ddkLogInfo("Product disconnected")
     }
     
-    func componentConnected(withKey key: String?, andIndex index: Int) {
+    public func componentConnected(withKey key: String?, andIndex index: Int) {
         ddkLogInfo("Component connected: \(key ?? ""), \(index)")
     }
     
-    func componentDisconnected(withKey key: String?, andIndex index: Int) {
+    public func componentDisconnected(withKey key: String?, andIndex index: Int) {
         ddkLogInfo("Component disconnected: \(key ?? ""), \(index)")
     }
 }
 
 extension DDKStartViewController: DJIAppActivationManagerDelegate {
-    func manager(_ manager: DJIAppActivationManager!, didUpdate appActivationState: DJIAppActivationState) {
+    public func manager(_ manager: DJIAppActivationManager!, didUpdate appActivationState: DJIAppActivationState) {
         self.refreshComponents()
         if appActivationState == .loginRequired {
             DJISDKManager.userAccountManager().logIntoDJIUserAccount(withAuthorizationRequired: false, withCompletion: { (state, error) in
@@ -318,7 +318,7 @@ extension DDKStartViewController: DJIAppActivationManagerDelegate {
         ddkLogInfo("App activation state: \(appActivationState.rawValue)")
     }
     
-    func manager(_ manager: DJIAppActivationManager!, didUpdate aircraftBindingState: DJIAppActivationAircraftBindingState) {
+    public func manager(_ manager: DJIAppActivationManager!, didUpdate aircraftBindingState: DJIAppActivationAircraftBindingState) {
         self.refreshComponents()
         ddkLogInfo("Aircraft binding state: \(aircraftBindingState.rawValue)")
     }

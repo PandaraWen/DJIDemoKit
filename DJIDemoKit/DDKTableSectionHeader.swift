@@ -8,9 +8,9 @@
 
 import UIKit
 
-class DDKTableSectionHeader: UITableViewHeaderFooterView {
+public class DDKTableSectionHeader: UITableViewHeaderFooterView {
     
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet public weak var titleLabel: UILabel!
     
 //    override init(reuseIdentifier: String?) {
 //        super.init(reuseIdentifier: reuseIdentifier)

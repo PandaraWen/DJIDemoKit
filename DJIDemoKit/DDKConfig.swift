@@ -9,8 +9,8 @@
 import UIKit
 import DJISDK
 
-class DDKConfig: NSObject {
-    static let `default` = DDKConfig()
+public class DDKConfig: NSObject {
+    public static let `default` = DDKConfig()
     
     fileprivate(set) var enableBridger = false
     fileprivate(set) var bridgerIP = ""
