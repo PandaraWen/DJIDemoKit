@@ -21,7 +21,7 @@ public class DDKStartViewController: UIViewController {
     fileprivate var infoTitles = ["Modle", "Activation state", "Binding state"]
     fileprivate var settingTitles = ["📟 Remote log", "⛓ Enable bridge"]
     
-    class func viewController() -> DDKStartViewController {
+    public class func viewController() -> DDKStartViewController {
         
         
         if let resourceBundle = DDKHelper.resourceBunde() {
