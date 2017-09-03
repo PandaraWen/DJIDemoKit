@@ -17,11 +17,9 @@ public class DDKHelper {
     
     public class func resourceBunde() -> Bundle? {
         let frameworkBundle = Bundle(for: DDKStartViewController.self)
-        if let bundleURL = frameworkBundle.resourceURL?.appendingPathComponent("DDKResource.bundle") {
-            let resourceBundle = Bundle(url: bundleURL)
+        if let bundleURL = frameworkBundle.resourceURL?.appendingPathComponent("DDKResource.bundle"), let resourceBundle = Bundle(url: bundleURL) {
             return resourceBundle
         }
-        
         return nil
     }
 }
