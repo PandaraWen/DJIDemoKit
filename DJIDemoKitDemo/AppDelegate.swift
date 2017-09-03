@@ -16,11 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-//        DJIRemoteLogger.configureLogger(withDeviceId: UIDevice.current.name, urlString: "http://192.168.1.8:4567", showLogInConsole: true)
-        
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        let viewCon = DDKStartViewController.viewController()
-        self.window?.rootViewController = viewCon
+        self.window?.rootViewController = DDKStartViewController()
         self.window?.makeKeyAndVisible()
         
         return true

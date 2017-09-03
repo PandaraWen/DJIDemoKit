@@ -23,10 +23,6 @@ http://www.kiwiinc.net
 
 	s.source_files = 'DJIDemoKit/*.swift'
 
-	s.resource_bundles = {
-		'DDKResource' => ['DJIDemoKit/DDKResource/*']
-	}
-
 	s.dependency 'DJI-SDK-iOS', '4.2.2'
 
 end

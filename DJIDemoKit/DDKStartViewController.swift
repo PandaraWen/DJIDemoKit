@@ -14,30 +14,19 @@ public protocol DDKStartViewControllerDelegate: NSObjectProtocol {
 }
 
 public class DDKStartViewController: UIViewController {
-    @IBOutlet fileprivate weak var goButton: UIButton!
-    @IBOutlet fileprivate weak var tableview: UITableView!
+    fileprivate var goButton: UIButton!
+    fileprivate var tableview: UITableView!
     public weak var delegate: DDKStartViewControllerDelegate?
     
     fileprivate var infoTitles = ["Modle", "Activation state", "Binding state"]
     fileprivate var settingTitles = ["📟 Remote log", "⛓ Enable bridge"]
     
-    public class func viewController() -> DDKStartViewController {
-        
-        
-        if let resourceBundle = DDKHelper.resourceBunde() {
-            let viewCon = DDKStartViewController(nibName: "DDKStartViewController", bundle: resourceBundle)
-            return viewCon
-        } else {
-            let viewCon = DDKStartViewController()
-            return viewCon
-        }
-        
-    }
-    
     public override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Start up"
+        self.view.backgroundColor = UIColor.white
         
+        self.setupGoButton()
         self.setupTableview()
         self.refreshComponents()
         DJISDKManager.appActivationManager().delegate = self
@@ -47,13 +36,43 @@ public class DDKStartViewController: UIViewController {
 
 // MARK: UI
 fileprivate extension DDKStartViewController {
+    func setupGoButton() {
+        self.goButton = {
+            let button = UIButton()
+            button.setBackgroundImage(UIImage.image(of: UIColor.ddkVIBlue, with: CGSize(width: 1, height: 1)), for: .normal)
+            button.addTarget(self, action: #selector(onGoButtonClicked(_:)), for: .touchUpInside)
+            button.setTitleColor(UIColor.white, for: .normal)
+            button.setTitle("Go", for: .normal)
+            button.titleLabel?.font = UIFont.systemFont(ofSize: 15)
+            self.view.addSubview(button)
+            button.snp.makeConstraints({ (make) in
+                make.left.bottom.right.equalTo(self.view)
+                make.height.equalTo(45)
+            })
+            return button
+        }()
+    }
+    
     func setupTableview() {
-        if #available(iOS 11.0, *) {
-            self.tableview.contentInsetAdjustmentBehavior = .never
-        }
-        self.tableview.delaysContentTouches = false
-        self.tableview.register(DDKTableSectionHeader.self, forHeaderFooterViewReuseIdentifier: "DDKTableSectionHeader")
-        self.tableview.tableFooterView = UITableView()
+        self.tableview = {
+            let tableview = UITableView()
+            tableview.delegate = self
+            tableview.dataSource = self
+            tableview.backgroundColor = UIColor.clear
+            if #available(iOS 11.0, *) {
+                tableview.contentInsetAdjustmentBehavior = .never
+            }
+            tableview.delaysContentTouches = false
+            tableview.register(DDKTableSectionHeader.self, forHeaderFooterViewReuseIdentifier: "DDKTableSectionHeader")
+            tableview.tableFooterView = UITableView()
+            self.view.addSubview(tableview)
+            tableview.snp.makeConstraints({ (make) in
+                make.left.right.equalTo(self.view)
+                make.top.equalTo(self.view).offset(20)
+                make.bottom.equalTo(self.goButton.snp.top)
+            })
+            return tableview
+        }()
     }
 }
 
@@ -133,7 +152,7 @@ fileprivate extension DDKStartViewController {
 
 // MARK: Actions
 fileprivate extension DDKStartViewController {
-    @objc @IBAction func onGoButtonClicked(_ sender: Any) {
+    @objc func onGoButtonClicked(_ sender: Any) {
         self.delegate?.startViewControllerDidClickGoButton(self)
     }
 }

@@ -12,8 +12,6 @@
 		9856FBCC1F58FED600402BBF /* DDKTableSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9856FBCB1F58FED600402BBF /* DDKTableSectionHeader.swift */; };
 		9856FBD01F5916F500402BBF /* DDKConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9856FBCF1F5916F500402BBF /* DDKConfig.swift */; };
 		9856FBD41F59301F00402BBF /* DDKConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9856FBD31F59301F00402BBF /* DDKConstant.swift */; };
-		9856FC001F5C1D1900402BBF /* DDKStartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9856FBFE1F5C1C2400402BBF /* DDKStartViewController.xib */; };
-		9858CDA41F5C1D9D005F530C /* DDKAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9856FBFD1F5C1C2400402BBF /* DDKAssets.xcassets */; };
 		9867DE5B1F5814F800ADC765 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9867DE5A1F5814F800ADC765 /* AppDelegate.swift */; };
 		9867DE5D1F5814F800ADC765 /* DDKStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9867DE5C1F5814F800ADC765 /* DDKStartViewController.swift */; };
 		9867DE621F5814F800ADC765 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9867DE611F5814F800ADC765 /* Assets.xcassets */; };
@@ -22,6 +20,7 @@
 		9867DE731F581BC400ADC765 /* DDKComponentHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9867DE721F581BC400ADC765 /* DDKComponentHelper.swift */; };
 		9867DE751F5821A300ADC765 /* DDKLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9867DE741F5821A300ADC765 /* DDKLogger.swift */; };
 		98BBC9D41F5C4C4B00D150A6 /* UIColor+DDKExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BBC9D31F5C4C4B00D150A6 /* UIColor+DDKExtension.swift */; };
+		98BBC9D61F5C517800D150A6 /* UIImage+DDKExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BBC9D51F5C517800D150A6 /* UIImage+DDKExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,8 +30,6 @@
 		9856FBCB1F58FED600402BBF /* DDKTableSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDKTableSectionHeader.swift; sourceTree = "<group>"; };
 		9856FBCF1F5916F500402BBF /* DDKConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDKConfig.swift; sourceTree = "<group>"; };
 		9856FBD31F59301F00402BBF /* DDKConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDKConstant.swift; sourceTree = "<group>"; };
-		9856FBFD1F5C1C2400402BBF /* DDKAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = DDKAssets.xcassets; sourceTree = "<group>"; };
-		9856FBFE1F5C1C2400402BBF /* DDKStartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DDKStartViewController.xib; sourceTree = "<group>"; };
 		9863CB7F1F58239000B954CC /* LogHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogHelper.swift; sourceTree = "<group>"; };
 		9867DE571F5814F800ADC765 /* DJIDemoKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DJIDemoKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9867DE5A1F5814F800ADC765 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +41,7 @@
 		9867DE721F581BC400ADC765 /* DDKComponentHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDKComponentHelper.swift; sourceTree = "<group>"; };
 		9867DE741F5821A300ADC765 /* DDKLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDKLogger.swift; sourceTree = "<group>"; };
 		98BBC9D31F5C4C4B00D150A6 /* UIColor+DDKExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+DDKExtension.swift"; sourceTree = "<group>"; };
+		98BBC9D51F5C517800D150A6 /* UIImage+DDKExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+DDKExtension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,15 +63,6 @@
 				2E1BC8FC0D13048EA2B4D913 /* Pods-DJIDemoKitDemo.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		9856FBFC1F5C1C2400402BBF /* DDKResource */ = {
-			isa = PBXGroup;
-			children = (
-				9856FBFD1F5C1C2400402BBF /* DDKAssets.xcassets */,
-				9856FBFE1F5C1C2400402BBF /* DDKStartViewController.xib */,
-			);
-			path = DDKResource;
 			sourceTree = "<group>";
 		};
 		9867DE4E1F5814F800ADC765 = {
@@ -118,7 +107,7 @@
 				9856FBCB1F58FED600402BBF /* DDKTableSectionHeader.swift */,
 				9863CB7F1F58239000B954CC /* LogHelper.swift */,
 				98BBC9D31F5C4C4B00D150A6 /* UIColor+DDKExtension.swift */,
-				9856FBFC1F5C1C2400402BBF /* DDKResource */,
+				98BBC9D51F5C517800D150A6 /* UIImage+DDKExtension.swift */,
 			);
 			path = DJIDemoKit;
 			sourceTree = "<group>";
@@ -192,8 +181,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9858CDA41F5C1D9D005F530C /* DDKAssets.xcassets in Resources */,
-				9856FC001F5C1D1900402BBF /* DDKStartViewController.xib in Resources */,
 				9867DE651F5814F800ADC765 /* LaunchScreen.storyboard in Resources */,
 				9867DE621F5814F800ADC765 /* Assets.xcassets in Resources */,
 			);
@@ -262,6 +249,7 @@
 				9867DE5B1F5814F800ADC765 /* AppDelegate.swift in Sources */,
 				9867DE701F5818BE00ADC765 /* DDKHelper.swift in Sources */,
 				9867DE751F5821A300ADC765 /* DDKLogger.swift in Sources */,
+				98BBC9D61F5C517800D150A6 /* UIImage+DDKExtension.swift in Sources */,
 				9856FBCC1F58FED600402BBF /* DDKTableSectionHeader.swift in Sources */,
 				98BBC9D41F5C4C4B00D150A6 /* UIColor+DDKExtension.swift in Sources */,
 			);
