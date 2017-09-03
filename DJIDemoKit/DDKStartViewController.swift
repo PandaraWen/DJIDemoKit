@@ -229,6 +229,10 @@ extension DDKStartViewController: UITableViewDelegate {
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
+        guard indexPath.section == 1 else {
+            return
+        }
+        
         switch indexPath.row {
         case 0: // Remote log
             self.enableRemoteLog()
