@@ -21,6 +21,19 @@ public class DDKStartViewController: UIViewController {
     fileprivate var infoTitles = ["Modle", "Activation state", "Binding state"]
     fileprivate var settingTitles = ["📟 Remote log", "⛓ Enable bridge"]
     
+    class func viewController() -> DDKStartViewController {
+        
+        
+        if let resourceBundle = DDKHelper.resourceBunde() {
+            let viewCon = DDKStartViewController(nibName: "DDKStartViewController", bundle: resourceBundle)
+            return viewCon
+        } else {
+            let viewCon = DDKStartViewController()
+            return viewCon
+        }
+        
+    }
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Start up"
@@ -39,7 +52,7 @@ fileprivate extension DDKStartViewController {
             self.tableview.contentInsetAdjustmentBehavior = .never
         }
         self.tableview.delaysContentTouches = false
-        self.tableview.register(UINib(nibName: "DDKTableSectionHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "DDKTableSectionHeader")
+        self.tableview.register(UINib(nibName: "DDKTableSectionHeader", bundle: DDKHelper.resourceBunde()), forHeaderFooterViewReuseIdentifier: "DDKTableSectionHeader")
         self.tableview.tableFooterView = UITableView()
     }
 }

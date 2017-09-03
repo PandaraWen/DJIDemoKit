@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        DJIRemoteLogger.configureLogger(withDeviceId: UIDevice.current.name, urlString: "http://192.168.1.8:4567", showLogInConsole: true)
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        let viewCon = DDKStartViewController()
+        let viewCon = DDKStartViewController.viewController()
         self.window?.rootViewController = viewCon
         self.window?.makeKeyAndVisible()
         
