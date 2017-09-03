@@ -75,6 +75,7 @@ import DJIDemoKit
 
 ...
 let viewCon = DDKStartupViewController()
+viewCon.delegate = myDelegate
 ...
 ```
 
