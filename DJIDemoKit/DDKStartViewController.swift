@@ -52,7 +52,7 @@ fileprivate extension DDKStartViewController {
             self.tableview.contentInsetAdjustmentBehavior = .never
         }
         self.tableview.delaysContentTouches = false
-        self.tableview.register(UINib(nibName: "DDKTableSectionHeader", bundle: DDKHelper.resourceBunde()), forHeaderFooterViewReuseIdentifier: "DDKTableSectionHeader")
+        self.tableview.register(DDKTableSectionHeader.self, forHeaderFooterViewReuseIdentifier: "DDKTableSectionHeader")
         self.tableview.tableFooterView = UITableView()
     }
 }

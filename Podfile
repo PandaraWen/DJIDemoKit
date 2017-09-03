@@ -7,5 +7,5 @@ target 'DJIDemoKitDemo' do
 
   # Pods for DJIDemoKitDemo
   pod 'DJI-SDK-iOS', '4.2.2'
-  pod 'VideoPreviewer', :git => 'git@dev.kiwiinc.net:kiwi-team/DJI-Mobile-SDK-iOS.git'
+  pod 'SnapKit', '3.2.0'
 end
