@@ -156,6 +156,8 @@ fileprivate extension DDKStartViewController {
             }
         })
         
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
             guard let ip = alert.textFields![0].text, let port = alert.textFields![1].text else {
                 return
@@ -180,6 +182,8 @@ fileprivate extension DDKStartViewController {
                 textfield.text = remoteLogIP
             }
         })
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
             guard let ip = alert.textFields![0].text else {
