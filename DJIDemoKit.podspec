@@ -12,8 +12,8 @@ http://www.kiwiinc.net
     LICENSE
   	}
 
-	s.homepage = 'http://dev.kiwiinc.net/kiwi-team/DJIDemoKitDemo'
-	s.source = { :git => 'git@dev.kiwiinc.net:kiwi-team/DJIDemoKitDemo.git', 
+	s.homepage = 'http://dev.kiwiinc.net/kiwi-team/DJIDemoKit'
+	s.source = { :git => 'git@dev.kiwiinc.net:kiwi-team/DJIDemoKit.git', 
 					:tag => "v#{s.version}"}
 	s.summary = 'Awesome tool for creating a demo'
 	s.platform = :ios
