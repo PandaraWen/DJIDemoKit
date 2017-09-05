@@ -79,7 +79,22 @@ viewCon.delegate = myDelegate
 ...
 ```
 
-### 0x02 DDKLogger
+### 0x02 DDKRCViewController
+
+The `DDKRCViewController` will show you the joysticks' value on its view:
+
+![image](./_readme_resource/rc_view_controller.png)
+
+To use `DDKRCViewController`:
+
+```
+let viewCon = DDKRCViewController()
+self.present(viewCon, animated: true, completion: nil)
+```
+
+The view controller will make itself to be the delegate of `DJIRemoteController`, and get data from delegate methods.
+
+### 0x03 DDKLogger
 
 The `DDKLogger` can let you log something to console with some preconfig style. And if you enable **remote logging mode**, `DDKLogger` will log info to console and your remote log server.
 
@@ -91,7 +106,7 @@ ddkLogError("...")
 ddkLogWarning("...")
 ```
 
-### 0x03 DDKConfig
+### 0x04 DDKConfig
 
 `DDKConfig` contains all configuration info that you did in `StartupViewController`:
 

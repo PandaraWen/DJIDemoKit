@@ -36,7 +36,7 @@ public class DDKRCViewController: UIViewController {
         self.leftTopLabel.text = "0"
         self.rightTopLabel.text = "0"
         self.rightLabel.text = "0"
-        
+
         DDKComponentHelper.fetchRemoteController()?.delegate = self
     }
     
