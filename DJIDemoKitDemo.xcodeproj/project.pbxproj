@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8D1482F3F415F2E46A61DEAD /* Pods_DJIDemoKitDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 218DED35C8DA9CDA33B09F45 /* Pods_DJIDemoKitDemo.framework */; };
+		98212E951F5E3E1E00F7612E /* DDKRCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98212E941F5E3DAA00F7612E /* DDKRCViewController.swift */; };
 		98428B351F58241400F74F41 /* LogHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9863CB7F1F58239000B954CC /* LogHelper.swift */; };
 		9856FBCC1F58FED600402BBF /* DDKTableSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9856FBCB1F58FED600402BBF /* DDKTableSectionHeader.swift */; };
 		9856FBD01F5916F500402BBF /* DDKConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9856FBCF1F5916F500402BBF /* DDKConfig.swift */; };
@@ -27,6 +28,7 @@
 		218DED35C8DA9CDA33B09F45 /* Pods_DJIDemoKitDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DJIDemoKitDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E1BC8FC0D13048EA2B4D913 /* Pods-DJIDemoKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DJIDemoKitDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DJIDemoKitDemo/Pods-DJIDemoKitDemo.release.xcconfig"; sourceTree = "<group>"; };
 		673FA7179B955A2887EA5813 /* Pods-DJIDemoKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DJIDemoKitDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DJIDemoKitDemo/Pods-DJIDemoKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		98212E941F5E3DAA00F7612E /* DDKRCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDKRCViewController.swift; sourceTree = "<group>"; };
 		9856FBCB1F58FED600402BBF /* DDKTableSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDKTableSectionHeader.swift; sourceTree = "<group>"; };
 		9856FBCF1F5916F500402BBF /* DDKConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDKConfig.swift; sourceTree = "<group>"; };
 		9856FBD31F59301F00402BBF /* DDKConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDKConstant.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				9856FBCF1F5916F500402BBF /* DDKConfig.swift */,
 				9867DE6F1F5818BE00ADC765 /* DDKHelper.swift */,
 				9867DE741F5821A300ADC765 /* DDKLogger.swift */,
+				98212E941F5E3DAA00F7612E /* DDKRCViewController.swift */,
 				9867DE5C1F5814F800ADC765 /* DDKStartViewController.swift */,
 				9856FBCB1F58FED600402BBF /* DDKTableSectionHeader.swift */,
 				9863CB7F1F58239000B954CC /* LogHelper.swift */,
@@ -241,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98212E951F5E3E1E00F7612E /* DDKRCViewController.swift in Sources */,
 				98428B351F58241400F74F41 /* LogHelper.swift in Sources */,
 				9856FBD41F59301F00402BBF /* DDKConstant.swift in Sources */,
 				9867DE5D1F5814F800ADC765 /* DDKStartViewController.swift in Sources */,
