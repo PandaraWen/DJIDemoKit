@@ -30,8 +30,13 @@ public func ddkLogWarning(_ message: String, file: StaticString = #file, functio
 
 public class DDKLogger: NSObject {
     public static let shareLogger: DDKLogger = DDKLogger()
+    var enable = true
     
     public func log(_ message: String, file: StaticString = #file, function: StaticString = #function, line: UInt = #line) {
+        guard enable else {
+            return
+        }
+        
         let fileName = (String(describing: file) as NSString).lastPathComponent
         let logMsg = "\n\(fileName).\(function).line\(line):\n\(message)"
         

@@ -19,7 +19,7 @@ public class DDKStartViewController: UIViewController {
     public weak var delegate: DDKStartViewControllerDelegate?
     
     fileprivate var infoTitles = ["Modle", "Activation state", "Binding state"]
-    fileprivate var settingTitles = ["📟 Remote log", "⛓ Enable bridge"]
+    fileprivate var settingTitles = ["📟 Use Remote log", "⛓ Enable bridge", "🎚 Log enable"]
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -142,6 +142,8 @@ fileprivate extension DDKStartViewController {
             settingCell.detailTextLabel?.text = DDKConfig.default.enableRemoteLog ? "✅" : "No"
         case 1: // Bridger
             settingCell.detailTextLabel?.text = DDKConfig.default.enableBridger ? "✅" : "No"
+        case 2: // Log enable
+            settingCell.detailTextLabel?.text = DDKLogger.shareLogger.enable ? "✅" : "No"
         default:
             break
         }
@@ -238,6 +240,9 @@ extension DDKStartViewController: UITableViewDelegate {
             self.enableRemoteLog()
         case 1: // Enable bridge
             self.enableBridger()
+        case 2: // Log enable
+            DDKLogger.shareLogger.enable = !DDKLogger.shareLogger.enable
+            self.tableview.reloadData()
         default:
             break
         }
