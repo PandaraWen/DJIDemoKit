@@ -19,7 +19,7 @@ public class DDKRCViewController: UIViewController {
     fileprivate var leftContainer: UIView!
     fileprivate var rightContainer: UIView!
     
-    fileprivate let _viColor = UIColor(colorLiteralRed: 0, green: 140 / 255.0, blue: 1, alpha: 1)
+    fileprivate let _viColor = UIColor(r: 0, g: 140, b: 1, a: 1)
     fileprivate let _stickSize = 10
     
     fileprivate var leftStickV: UIView!
