@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 	s.name = 'DJIDemoKit'
-	s.version = '0.1'
+	s.version = '0.2'
 	s.author = { 'kiwi-team' => 'www.kiwiinc.net' }
 	s.license = { :type => 'CUSTOM', :text => <<-LICENSE
 ****************************************************************************************************************************
