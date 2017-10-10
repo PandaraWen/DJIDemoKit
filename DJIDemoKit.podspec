@@ -23,7 +23,7 @@ http://www.kiwiinc.net
 
 	s.source_files = 'DJIDemoKit/*.swift'
 
-	s.dependency 'DJI-SDK-iOS', '4.2.2'
-	s.dependency 'SnapKit', '3.2.0'
+	s.dependency 'DJI-SDK-iOS', '4.3.1'
+	s.dependency 'SnapKit', '4.0'
 
 end
