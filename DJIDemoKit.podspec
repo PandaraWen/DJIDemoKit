@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 	s.name = 'DJIDemoKit'
-	s.version = '0.2'
+	s.version = '0.9'
 	s.author = { 'kiwi-team' => 'www.kiwiinc.net' }
 	s.license = { :type => 'CUSTOM', :text => <<-LICENSE
 ****************************************************************************************************************************
@@ -23,7 +23,7 @@ http://www.kiwiinc.net
 
 	s.source_files = 'DJIDemoKit/*.swift'
 
-	s.dependency 'DJI-SDK-iOS', '4.3.1'
+	s.dependency 'DJI-SDK-iOS', '4.3.2'
 	s.dependency 'SnapKit', '4.0'
 
 	s.pod_target_xcconfig = {'ENABLE_BITCODE' => 'NO'}
