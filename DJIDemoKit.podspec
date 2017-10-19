@@ -1,21 +1,11 @@
 Pod::Spec.new do |s|
 	s.name = 'DJIDemoKit'
 	s.version = '0.9'
-	s.author = { 'kiwi-team' => 'www.kiwiinc.net' }
-	s.license = { :type => 'CUSTOM', :text => <<-LICENSE
-****************************************************************************************************************************
-
-DJIDemoKit is offered under KIWI's END USER LICENSE AGREEMENT. You can obtain the license from the below link:
-http://www.kiwiinc.net
-
-****************************************************************************************************************************
-    LICENSE
-  	}
-
-	s.homepage = 'http://dev.kiwiinc.net/kiwi-team/DJIDemoKit'
-	s.source = { :git => 'git@dev.kiwiinc.net:kiwi-team/DJIDemoKit.git', 
-					:tag => "v#{s.version}"}
-	s.summary = 'Awesome tool for creating a demo'
+	s.author = { 'Pandara' => 'www.pandara.xyz' }
+	s.license = 'MIT'
+	s.homepage = 'https://github.com/PandaraWen/DJIDemoKit'
+	s.source = { :git => 'https://github.com/PandaraWen/DJIDemoKit.git', :tag => "v#{s.version}"}
+	s.summary = 'Awesome tool for creating a demo with DJISDK'
 	s.platform = :ios
 	s.ios.deployment_target = '10.0'
 
