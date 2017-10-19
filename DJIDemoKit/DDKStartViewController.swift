@@ -18,7 +18,7 @@ public class DDKStartViewController: UIViewController {
     fileprivate var tableview: UITableView!
     public weak var delegate: DDKStartViewControllerDelegate?
     
-    fileprivate var infoTitles = ["Modle", "Activation state", "Binding state"]
+    fileprivate var infoTitles = ["Model", "Activation state", "Binding state"]
     fileprivate var settingTitles = ["📟 Use Remote log", "⛓ Enable bridge", "🎚 Log enable"]
     
     public override func viewDidLoad() {
@@ -123,7 +123,7 @@ fileprivate extension DDKStartViewController {
     
     func setInfoCellDetail(_ infoCell: UITableViewCell, at row: Int) {
         switch row {
-        case 0: // Modle name
+        case 0: // Model name
             infoCell.detailTextLabel?.text = DDKComponentHelper.fetchProduct()?.model ?? "Not connected"
         case 1: // Activation state
             infoCell.detailTextLabel?.text = self.string(from: DJISDKManager.appActivationManager().appActivationState)
