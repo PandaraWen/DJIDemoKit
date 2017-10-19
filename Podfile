@@ -6,7 +6,7 @@ target 'DJIDemoKitDemo' do
   use_frameworks!
 
   # Pods for DJIDemoKitDemo
-  pod 'DJI-SDK-iOS', '~> 4.3.1'
+  pod 'DJI-SDK-iOS', '~> 4.3.2'
   pod 'SnapKit', '~> 4.0'
 end
 
