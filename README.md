@@ -19,7 +19,7 @@ In the comming future, `DJIDemoKit` can even simply the progress of project conf
 Insert dependency below to your podfile:
 
 ```
-pod 'DJIDemoKit', :git => 'git@dev.kiwiinc.net:kiwi-team/DJIDemoKit.git'
+pod 'DJIDemoKit'
 ```
 
 Then run command below in console at your working directory:
@@ -31,7 +31,7 @@ pod install
 Your may see:
 
 ```
-Installing DJI-SDK-iOS (4.2.2)
+Installing DJI-SDK-iOS (4.3.2)
 Installing DJIDemoKit 0.1 (was 0.1)
 Installing SnapKit (3.2.0)
 ```
