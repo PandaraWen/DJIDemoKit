@@ -42,7 +42,7 @@ Yes, `DJIDemoKit` depends on `SnapKit` and `DJISDK`.
 
 ### 0X01
 
-Set your project's swift version to **3.x**
+Set your project's swift version to **4.0**
 
 > That is because `DJIDemoKit` dependents on `DJISDK` and `SnapKit`, and `SnapKit` does not support swift 4.X so far.
 
@@ -123,6 +123,6 @@ You can dig into this project to discover other minor modules.
 
 ## Contribution
 
-If you want to add some other component like `VideoPreviewerController` or some other debug configuration, just feel free to let me know by **Creating issues**. Or you can contribute your code through **merge rquest**.
+If you want to add some other component like `VideoPreviewerController` or some other debug configuration, just feel free to let me know by **creating issues**. Or you can contribute your code through **pull rquest**.
 
 Respect.
