@@ -70,7 +70,7 @@ Finally, don't forget to set your `DJISDKAppKey` in your `info.plist` file.
 
 ## Usage
 
-### 0x01 DDKStartupViewController
+### 0x01 DDKStartViewController
 
 The `DDKStartViewController` is the controller that the screen shot shows to you. When device is connected, the tableview will display the infos of device, also you can proceed activation stuff here.
 
@@ -82,7 +82,7 @@ To use `DDKStartViewController`, just simply:
 import DJIDemoKit
 
 ...
-let viewCon = DDKStartupViewController()
+let viewCon = DDKStartViewController()
 viewCon.delegate = myDelegate
 ...
 ```
