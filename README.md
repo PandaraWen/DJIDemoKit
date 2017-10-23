@@ -56,7 +56,15 @@ Remove `DJISDK` and `SnapKit` from your podfile if they exist.
 
 Add `Supported external accessory protocols` item in your project's `info.plist` file. This is required by DJISDK.
 
+![image](./_readme_resource/external_access.png)
+
 ### 0X04
+
+Disable bitcode setting in your project, for **DJI-SDK-iOS** not containing bitcode.
+
+![image](./_readme_resource/bitcode.png)
+
+### 0X05
 
 Finally, don't forget to set your `DJISDKAppKey` in your `info.plist` file.
 
