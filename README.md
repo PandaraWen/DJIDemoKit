@@ -72,11 +72,11 @@ Finally, don't forget to set your `DJISDKAppKey` in your `info.plist` file.
 
 ### 0x01 DDKStartupViewController
 
-The `DDKStartupViewController` is the controller that the screen shot shows to you. When device is connected, the tableview will display the infos of device, also you can proceed activation stuff here.
+The `DDKStartViewController` is the controller that the screen shot shows to you. When device is connected, the tableview will display the infos of device, also you can proceed activation stuff here.
 
 Besides, you can config your remote log server info and bridger app ip here.
 
-To use `DDKStartupViewController`, just simply:
+To use `DDKStartViewController`, just simply:
 
 ```
 import DJIDemoKit
