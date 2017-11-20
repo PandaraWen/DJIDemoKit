@@ -1,4 +1,4 @@
 #!/bin/sh
 pwd
-ls -a pwd
-pod install
+ls -a
+/usr/local/bin/pod install
