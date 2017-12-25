@@ -13,8 +13,8 @@ Pod::Spec.new do |s|
 
 	s.source_files = 'DJIDemoKit/*.swift'
 
-	s.dependency 'DJI-SDK-iOS', '4.3.2'
-	s.dependency 'SnapKit', '4.0'
+	s.dependency 'DJI-SDK-iOS', '~> 4.4'
+	s.dependency 'SnapKit', '~> 4.0'
 
 	s.pod_target_xcconfig = {'ENABLE_BITCODE' => 'NO'}
 end
